@@ -115,13 +115,3 @@ void autonomous() {
     delay(500);
     drive(0,0);
 }
-
-// void initializeCata(){
-//     if(task == nullptr){
-//         pros::Task task{[=] {
-//             Controller master(E_CONTROLLER_MASTER);
-            
-    
-//     }};}
-
-// }
