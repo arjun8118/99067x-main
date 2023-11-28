@@ -58,17 +58,13 @@ void opcontrol() {
             cata.move(0);
             cata2.move(0);
         }
-        if (master.get_digital(DIGITAL_R2)){
-            drive(-15,-15);
-        }
-    else{
+
          // Gets the x and y values L2 or the joystick on the controller
         int yval = master.get_analog(E_CONTROLLER_ANALOG_LEFT_Y);
         int xval = master.get_analog(E_CONTROLLER_ANALOG_LEFT_X);
         
         // Drives the robot with the amount choose on the controller joystick
         drive(yval+xval, yval-xval);
-    }
 
         
         // Arrow keys controls template
@@ -79,7 +75,7 @@ void opcontrol() {
 		
        
     }
-    delay(15);
+    pros::delay(15);
 }
 
 // The drive function, moves the 4 motors on the drive train
@@ -106,12 +102,12 @@ void autonomous() {
     // delay(500);
     // drive(0,0);
     drive(40,40);
-    delay(1850);
+    pros::delay(1850);
     drive(-40,40);
-    delay(410);
+    pros::delay(410);
     drive(90,90);
-    delay(500);
+    pros::delay(500);
     drive(-40,0);
-    delay(500);
+    pros::delay(500);
     drive(0,0);
 }
